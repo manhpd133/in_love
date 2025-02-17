@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 666 Day</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="password-modal" id="passwordModal">
+            <div class="modal-header">
+                <i class="fas fa-lock"></i>
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-content">
+                <h2>HAPPY 666 DAY</h2>
+                <div class="video-preview">
+                    <div class="video-placeholder" style="background-image: url('./img/img_1.jpg');"></div>
+                </div>
+                <div class="password-section">
+                    <div class="password-input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="passwordInput" readonly placeholder="enter our password">
+                    </div>
+                    <div class="numpad">
+                        <button class="num-button">1</button>
+                        <button class="num-button">2</button>
+                        <button class="num-button">3</button>
+                        <button class="num-button">4</button>
+                        <button class="num-button">5</button>
+                        <button class="num-button">6</button>
+                        <button class="num-button">7</button>
+                        <button class="num-button">8</button>
+                        <button class="num-button">9</button>
+                        <button class="num-button clear">C</button>
+                        <button class="num-button">0</button>
+                        <button class="num-button enter">↵</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="mainContent" style="display: none;">
+            <!-- Your anniversary content will go here -->
+        </div>
+    </div>
+
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <h2>🎉 Wao thật tuyệt vời! 🎉</h2>
+            <p>Chúc mừng em đã nhớ đúng ngày của chúng ta💕</p>
+            <button id="continueBtn">Continue</button>
+        </div>
+    </div>
+
+    <div id="errorPopup" class="popup">
+        <div class="popup-content error">
+            <h2>❌ Không đúng ròi 🤧</h2>
+            <p id="errorMessage"></p>
+            <button id="tryAgainBtn">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

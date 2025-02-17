@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 666 Day - Celebration</title>
+    <link rel="stylesheet" href="celebration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Add audio player -->
+    <audio id="bgMusic" loop autoplay>
+        <source src="./mp3/nhac1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="musicToggle" class="music-toggle">
+        <i class="fas fa-music"></i>
+    </button>
+    
+    <div class="celebration-container">
+        <div class="love-counter">
+            <div class="profile-pic">
+                <img src="./img/img_1.jpg" alt="Our Photo">
+            </div>
+            <div class="counter-title">
+                <h2>How long we have been together? 💕</h2>
+            </div>
+            <div class="counter-display">
+                <div class="time-block">
+                    <span id="days">369</span>
+                    <p>Days</p>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-block">
+                    <span id="hours">01</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-block">
+                    <span id="minutes">38</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-block">
+                    <span id="seconds">03</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            <div class="hearts">
+                <span>❤️</span>
+                <span>❤️</span>
+                <span>❤️</span>
+                <span>❤️</span>
+                <span>❤️</span>
+            </div>
+            <div class="next-section">
+                <div class="next-text">Ready for more memories?</div>
+                <button id="nextButton" class="next-button">
+                    Continue <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="falling-hearts" id="fallingHearts"></div>
+    <!-- Add this right after <body> tag -->
+    <script src="celebration.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ffb6c1, #ff69b4);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Add falling hearts animation */
+.falling-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart {
+    position: fixed;
+    font-size: 20px;
+    animation: falling linear infinite;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-10vh) translateX(-10px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(10px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.celebration-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.love-counter {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff6b8b;
+}
+
+/* Remove the entire ::before block */
+.profile-pic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+}
+
+.counter-title h2 {
+    color: #ff6b8b;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.counter-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.time-block {
+    text-align: center;
+}
+
+.time-block span {
+    font-size: 48px;
+    color: #ff6b8b;
+    font-weight: bold;
+}
+
+.time-block p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.time-separator {
+    font-size: 48px;
+    color: #ff6b8b;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+.hearts {
+    margin-top: 20px;
+}
+
+.hearts span {
+    font-size: 24px;
+    margin: 0 5px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.hearts span:nth-child(2) { animation-delay: 0.3s; }
+.hearts span:nth-child(3) { animation-delay: 0.6s; }
+.hearts span:nth-child(4) { animation-delay: 0.9s; }
+.hearts span:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+/* Add at the beginning of your CSS file */
+audio {
+    display: none;
+}
+
+.music-toggle, .next-button {
+    position: fixed;
+    bottom: 20px;  /* Changed from top to bottom */
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.music-toggle {
+    right: 20px;
+}
+
+.next-button {
+    right: 70px;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+}
+
+.music-toggle i {
+    color: #ff6b8b;
+    font-size: 20px;
+}
+
+.music-toggle.paused i {
+    color: #666;
+}
+.next-section {
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;  /* Changed from 100% to auto */
+    gap: 30px;
+}
+
+.next-text {
+    color: #ff6b8b;
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;  /* Added to ensure text is centered */
+}
+
+.next-button {
+    position: relative;
+    left: 10px;
+    margin: 0 auto;  /* Added to center the button */
+    background: linear-gradient(135deg, #ff6b8b, #ff69b4);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 60px;
+    min-width: 200px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 107, 139, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+
+.next-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 107, 139, 0.3);
+    background: linear-gradient(135deg, #ff69b4, #ff6b8b);
+}
+
+.next-button:active {
+    transform: translateY(1px);
+}
+
+.next-button i {
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.next-button:hover i {
+    transform: translateX(3px);
+}
